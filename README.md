@@ -115,7 +115,9 @@ SecureAuth-API/
 </td>
 <td valign="top" width="50%">
 
-![Register API result](images/Screenshot%202026-06-07%20020508.png)
+<p align="center">
+  <img src="./images/Screenshot%202026-06-07%20020508.png" width="600" alt="Project Overview"/>
+</p>
 
 </td>
 </tr>
