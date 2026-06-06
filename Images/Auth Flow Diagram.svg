@@ -1,0 +1,128 @@
+<svg width="100%" viewBox="0 0 680 620" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>SecureAuth API – Authentication Flows</title>
+<desc>Three authentication flows: Registration with OTP, Login with dual tokens, and Token Rotation.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .th { font-size: 13px; font-weight: 600; fill: #1a1a2e; }
+    .ts { font-size: 11px; fill: #555; }
+    .sec-label { font-size: 11px; font-weight: 600; fill: #888; }
+    .arr { stroke: #aaa; stroke-width: 1.5; fill: none; }
+    /* Node fills */
+    .node-gray rect  { fill: #f3f3f3; stroke: #ccc; }
+    .node-purple rect { fill: #ede9fe; stroke: #a78bfa; }
+    .node-teal rect  { fill: #d1fae5; stroke: #34d399; }
+    .node-amber rect { fill: #fef3c7; stroke: #f59e0b; }
+    .node-coral rect { fill: #fee2e2; stroke: #f87171; }
+  </style>
+</defs>
+
+<!-- Section labels -->
+<text class="sec-label" x="16" y="28">Registration</text>
+<text class="sec-label" x="16" y="246">Login</text>
+<text class="sec-label" x="16" y="444">Token rotation</text>
+
+<!-- ── ROW 1a: Registration ── -->
+<g class="node-gray"><rect x="30" y="38" width="96" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="78" y="64" text-anchor="middle">User</text>
+
+<g class="node-purple"><rect x="160" y="38" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="218" y="57" text-anchor="middle">Register</text>
+<text class="ts" x="218" y="73" text-anchor="middle">username + email</text>
+
+<g class="node-purple"><rect x="312" y="38" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="370" y="57" text-anchor="middle">Hash password</text>
+<text class="ts" x="370" y="73" text-anchor="middle">bcrypt</text>
+
+<g class="node-teal"><rect x="464" y="38" width="100" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="514" y="57" text-anchor="middle">Save to DB</text>
+<text class="ts" x="514" y="73" text-anchor="middle">MongoDB</text>
+
+<line x1="126" y1="60" x2="158" y2="60" class="arr" marker-end="url(#arrow)"/>
+<line x1="276" y1="60" x2="310" y2="60" class="arr" marker-end="url(#arrow)"/>
+<line x1="428" y1="60" x2="462" y2="60" class="arr" marker-end="url(#arrow)"/>
+
+<!-- ── ROW 1b ── -->
+<g class="node-teal"><rect x="464" y="112" width="100" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="514" y="131" text-anchor="middle">Send OTP</text>
+<text class="ts" x="514" y="147" text-anchor="middle">Nodemailer</text>
+
+<g class="node-purple"><rect x="312" y="112" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="370" y="131" text-anchor="middle">Verify OTP</text>
+<text class="ts" x="370" y="147" text-anchor="middle">user enters code</text>
+
+<g class="node-teal"><rect x="160" y="112" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="218" y="131" text-anchor="middle">Account active</text>
+<text class="ts" x="218" y="147" text-anchor="middle">✓ verified</text>
+
+<line x1="514" y1="82" x2="514" y2="110" class="arr" marker-end="url(#arrow)"/>
+<line x1="462" y1="134" x2="430" y2="134" class="arr" marker-end="url(#arrow)"/>
+<line x1="310" y1="134" x2="278" y2="134" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Divider 1 -->
+<line x1="16" y1="230" x2="664" y2="230" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+<!-- ── ROW 2a: Login ── -->
+<g class="node-gray"><rect x="30" y="256" width="96" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="78" y="282" text-anchor="middle">User</text>
+
+<g class="node-purple"><rect x="160" y="256" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="218" y="275" text-anchor="middle">Login</text>
+<text class="ts" x="218" y="291" text-anchor="middle">email + password</text>
+
+<g class="node-purple"><rect x="312" y="256" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="370" y="275" text-anchor="middle">Verify creds</text>
+<text class="ts" x="370" y="291" text-anchor="middle">bcrypt compare</text>
+
+<g class="node-amber"><rect x="464" y="256" width="120" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="524" y="275" text-anchor="middle">Access token</text>
+<text class="ts" x="524" y="291" text-anchor="middle">short-lived JWT</text>
+
+<line x1="126" y1="278" x2="158" y2="278" class="arr" marker-end="url(#arrow)"/>
+<line x1="276" y1="278" x2="310" y2="278" class="arr" marker-end="url(#arrow)"/>
+<line x1="428" y1="278" x2="462" y2="278" class="arr" marker-end="url(#arrow)"/>
+
+<!-- ── ROW 2b ── -->
+<g class="node-amber"><rect x="464" y="328" width="120" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="524" y="347" text-anchor="middle">Refresh token</text>
+<text class="ts" x="524" y="363" text-anchor="middle">HttpOnly cookie</text>
+
+<g class="node-teal"><rect x="312" y="328" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="370" y="347" text-anchor="middle">Session record</text>
+<text class="ts" x="370" y="363" text-anchor="middle">server-side DB</text>
+
+<line x1="524" y1="300" x2="524" y2="326" class="arr" marker-end="url(#arrow)"/>
+<line x1="462" y1="350" x2="430" y2="350" class="arr" marker-end="url(#arrow)"/>
+
+<!-- Divider 2 -->
+<line x1="16" y1="430" x2="664" y2="430" stroke="#ddd" stroke-width="0.5" stroke-dasharray="4 4"/>
+
+<!-- ── ROW 3a: Token Rotation ── -->
+<g class="node-gray"><rect x="30" y="454" width="96" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="78" y="480" text-anchor="middle">Client</text>
+
+<g class="node-amber"><rect x="160" y="454" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="218" y="473" text-anchor="middle">Send refresh</text>
+<text class="ts" x="218" y="489" text-anchor="middle">via cookie</text>
+
+<g class="node-purple"><rect x="312" y="454" width="116" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="370" y="473" text-anchor="middle">Validate token</text>
+<text class="ts" x="370" y="489" text-anchor="middle">check session DB</text>
+
+<g class="node-amber"><rect x="464" y="454" width="120" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="524" y="473" text-anchor="middle">New access token</text>
+<text class="ts" x="524" y="489" text-anchor="middle">+ rotated refresh</text>
+
+<line x1="126" y1="476" x2="158" y2="476" class="arr" marker-end="url(#arrow)"/>
+<line x1="276" y1="476" x2="310" y2="476" class="arr" marker-end="url(#arrow)"/>
+<line x1="428" y1="476" x2="462" y2="476" class="arr" marker-end="url(#arrow)"/>
+
+<!-- ── ROW 3b ── -->
+<g class="node-coral"><rect x="464" y="526" width="120" height="44" rx="8" stroke-width="0.5"/></g>
+<text class="th" x="524" y="545" text-anchor="middle">Old token</text>
+<text class="ts" x="524" y="561" text-anchor="middle">invalidated</text>
+<line x1="524" y1="498" x2="524" y2="524" class="arr" marker-end="url(#arrow)"/>
+</svg>
