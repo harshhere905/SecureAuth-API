@@ -68,7 +68,7 @@ SecureAuth-API/
 
 ## 🔄 Authentication Flow
 
-![Auth Flow Diagram](images/Auth%20Flow%20Diagram.svg)
+![Auth Flow Diagram](Images/Auth%20Flow%20Diagram.svg)
 
 ---
 
@@ -115,9 +115,7 @@ SecureAuth-API/
 </td>
 <td valign="top" width="50%">
 
-<p align="center">
-  <img src="./images/Screenshot%202026-06-07%20020508.png" width="600" alt="Project Overview"/>
-</p>
+![Register API result](Images/Screenshot%202026-06-07%20020606.png)
 
 </td>
 </tr>
@@ -155,7 +153,7 @@ SecureAuth-API/
 </td>
 <td valign="top" width="50%">
 
-![Login API result](images/Screenshot%202026-06-07%20020606.png)
+![Login API result](Images/Screenshot%202026-06-07%20020713.png)
 
 </td>
 </tr>
@@ -187,8 +185,8 @@ SecureAuth-API/
 </td>
 <td valign="top" width="50%">
 
-![OTP verify result](images/Screenshot%202026-06-07%20020713.png)
-![API result](images/Screenshot%202026-06-07%20020728.png)
+![OTP verify result](Images/Screenshot%202026-06-07%20020606.png)
+![API result](Images/Screenshot%202026-06-07%20020728.png)
 
 </td>
 </tr>
