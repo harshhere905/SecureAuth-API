@@ -85,15 +85,16 @@ SecureAuth-API/
 | `POST` | `/logout` | Logout from current device | ✅ |
 | `POST` | `/logout-all` | Logout from all devices | ✅ |
 
+---
+
 ### Request & Response Examples
 
+---
 
 <details>
-<summary><strong>POST /api/auth/register</strong></summary>
+<summary><strong>📮 POST /api/auth/register</strong></summary>
 
-<table>
-<tr>
-<td valign="top" width="50%">
+<br>
 
 **Request Body:**
 ```json
@@ -103,6 +104,7 @@ SecureAuth-API/
   "password": "MySecurePass@123"
 }
 ```
+
 **Response `201`:**
 ```json
 {
@@ -111,22 +113,18 @@ SecureAuth-API/
 }
 ```
 
-</td>
-<td valign="top" width="50%">
+**Result:**
 
 ![Register API result](Images/Screenshot%202026-06-07%20020606.png)
 
-</td>
-</tr>
-</table>
 </details>
 
-<details>
-<summary><strong>POST /api/auth/login</strong></summary>
+---
 
-<table>
-<tr>
-<td valign="top" width="50%">
+<details>
+<summary><strong>🔓 POST /api/auth/login</strong></summary>
+
+<br>
 
 **Request Body:**
 ```json
@@ -135,6 +133,7 @@ SecureAuth-API/
   "password": "MySecurePass@123"
 }
 ```
+
 **Response `200`:**
 ```json
 {
@@ -147,24 +146,21 @@ SecureAuth-API/
   }
 }
 ```
+
 > 🍪 Refresh token is set as **HttpOnly Secure Cookie** automatically.
 
-</td>
-<td valign="top" width="50%">
+**Result:**
 
 ![Login API result](Images/Screenshot%202026-06-07%20020713.png)
 
-</td>
-</tr>
-</table>
 </details>
 
-<details>
-<summary><strong>POST /api/auth/verify-otp</strong></summary>
+---
 
-<table>
-<tr>
-<td valign="top" width="50%">
+<details>
+<summary><strong>✅ POST /api/auth/verify-otp</strong></summary>
+
+<br>
 
 **Request Body:**
 ```json
@@ -173,6 +169,7 @@ SecureAuth-API/
   "otp": "482910"
 }
 ```
+
 **Response `200`:**
 ```json
 {
@@ -181,15 +178,14 @@ SecureAuth-API/
 }
 ```
 
-</td>
-<td valign="top" width="50%">
+**OTP Email Received:**
 
-![OTP verify result](Images/Screenshot%202026-06-07%20020606.png)
-![API result](Images/Screenshot%202026-06-07%20020728.png)
+![OTP Email](Images/Screenshot%202026-06-07%20020606.png)
 
-</td>
-</tr>
-</table>
+**API Result:**
+
+![OTP Verify result](Images/Screenshot%202026-06-07%20020728.png)
+
 </details>
 
 ---
