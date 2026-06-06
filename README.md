@@ -68,7 +68,7 @@ SecureAuth-API/
 
 ## 🔄 Authentication Flow
 
-![Auth Flow Diagram](auth-flow.svg)
+![Auth Flow Diagram](images/Auth%20Flow%20Diagram.svg)
 
 ---
 
@@ -115,7 +115,7 @@ SecureAuth-API/
 </td>
 <td valign="top" width="50%">
 
-![Register API result](https://placehold.co/480x300/0f172a/22d3ee?text=📸+Add+your+Postman+screenshot+here%0Ascreenshots%2Fregister.png)
+![Register API result](images/Screenshot%202026-06-07%20020508.png)
 
 </td>
 </tr>
@@ -153,7 +153,7 @@ SecureAuth-API/
 </td>
 <td valign="top" width="50%">
 
-![Login API result](https://placehold.co/480x300/0f172a/22d3ee?text=📸+Add+your+Postman+screenshot+here%0Ascreenshots%2Flogin.png)
+![Login API result](images/Screenshot%202026-06-07%20020606.png)
 
 </td>
 </tr>
@@ -185,7 +185,8 @@ SecureAuth-API/
 </td>
 <td valign="top" width="50%">
 
-![OTP verify result](https://placehold.co/480x300/0f172a/22d3ee?text=📸+Add+your+OTP+email+%2F+Postman+screenshot%0Ascreenshots%2Fotp-verify.png)
+![OTP verify result](images/Screenshot%202026-06-07%20020713.png)
+![API result](images/Screenshot%202026-06-07%20020728.png)
 
 </td>
 </tr>
