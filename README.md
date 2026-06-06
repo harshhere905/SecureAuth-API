@@ -87,7 +87,6 @@ SecureAuth-API/
 
 ### Request & Response Examples
 
-> 📌 Replace the placeholder images below with your actual Postman/Thunderclient screenshots. Create a `screenshots/` folder in the repo root and add `register.png`, `login.png`, `otp-verify.png`.
 
 <details>
 <summary><strong>POST /api/auth/register</strong></summary>
